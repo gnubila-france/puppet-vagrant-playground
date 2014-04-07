@@ -75,10 +75,11 @@ vagrant ssh client
 
 ### Fixing for VirtualBox 4.310
 
-Required at each VM recreation).
+Required at each VM recreation.
 
 * Edit the Vagrantfile to set the owner and group for the synced_folder to
-root. (Only for the master:)
+  root. (Only for the master, as folder sync failed, puppet was not
+  installed hence the puppet user does not exist)
 
 * Fix the VBox additions and reload the VM:
 
@@ -87,10 +88,10 @@ vagrant ssh master -c 'sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGu estA
 vagrant reload master
 ```
 
-On the master puppt apply will fail due to incorrect rights on the
+On the master puppet apply will fail due to incorrect rights on the
 /etc/puppet/modules directory:
 
-* Edit the Vagrantfile to set the owner and group for the synced_folder to
+* Edit the Vagrantfile to set the owner and group for the synced_folder to puppet
 * Reload the VM and force provisionning
 
 ``` shell
