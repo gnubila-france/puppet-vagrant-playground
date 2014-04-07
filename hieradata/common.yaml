@@ -1,0 +1,10 @@
+---
+classes:
+  - 'puppet::agent'
+packages:
+  mysql-server:
+    ensure: 'installed'
+services:
+  mysql:
+    ensure: 'running'
+    require: Package[mysql-server]
