@@ -68,6 +68,19 @@ vagrant up client
 vagrant ssh client
 ```
 
+### Signing the puppet certificate of the client
+
+``` shell
+vagrant ssh master
+sudo puppet cert sign client.local.lan
+```
+
+### Manually launching the puppet agent
+
+``` shell
+puppet agent -vt
+```
+
 ## Knwon bugs
 
 * VirtualBox 4.3.10 additions are broken with regards to vboxsf:
