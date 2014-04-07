@@ -1,0 +1,13 @@
+forge "http://forge.puppetlabs.com"
+
+mod "puppetlabs/stdlib", "4.1.0"
+mod "ploperations/puppet", "0.12.0"
+mod "stahnma/puppetlabs_yum", "0.1.4"
+mod "ploperations/puppetlabs_apt", "0.0.3"
+mod "puppetlabs/apt", "1.4.2"
+mod "ploperations/interval", "0.0.1"
+mod "ploperations/unicorn", "1.0.0"
+mod "ploperations/bundler", "1.0.0"
+mod "puppetlabs/inifile", "1.0.3"
+mod "puppetlabs/apache", "1.0.1"
+mod "puppetlabs/concat", "1.0.2"
