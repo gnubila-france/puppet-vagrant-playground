@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'puppet'
+gem 'puppet-syntax'
+gem 'puppet-lint'
+gem 'r10k'
