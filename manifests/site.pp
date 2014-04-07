@@ -2,7 +2,7 @@ node 'puppet.local.lan' {
   class { 'puppet::server':
     servertype => 'standalone',
     manifest   => '/etc/puppet/manifests/site.pp',
-    modulepath => ['$confdir/modules'],
+    modulepath => ['$confdir/modules', '$confdir/dist'],
     ca         => true,
   }
   file { '/etc/puppet/hiera.yaml':
