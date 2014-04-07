@@ -98,7 +98,7 @@ Required at each VM recreation.
 * Fix the VBox additions and reload the VM:
 
 ``` shell
-vagrant ssh master -c 'sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGu estAdditions /usr/lib/VBoxGuestAdditions'
+vagrant ssh master -c 'sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions'
 vagrant reload master
 ```
 
