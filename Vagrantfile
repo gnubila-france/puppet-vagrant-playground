@@ -12,10 +12,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-73-x64-virtualbox-nocm.box"
 
-  # vagrant-cachier - cache at the VM level
+  # vagrant-cachier - cache at the box level
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.auto_detect = false
-    config.cache.scope = :machine
+    config.cache.scope = :box
   end
 
   # If true, then any SSH connections made will enable agent forwarding.
