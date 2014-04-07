@@ -1,3 +1,0 @@
-rvm use ruby-2.1.0@puppettests --create
-alias irb="bundle exec irb"
-alias puppet="bundle exec puppet"
