@@ -87,7 +87,7 @@ sudo puppet agent -vt
  * https://github.com/mitchellh/vagrant/issues/3341
  * https://www.virtualbox.org/ticket/12879
 
-### Fixing for VirtualBox 4.310
+### Workaround for VirtualBox 4.3.10 Guest Additions
 
 Required at each VM recreation.
 
