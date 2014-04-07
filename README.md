@@ -45,6 +45,12 @@ vagrant plugin install vagrant-hostsupdater
 vagrant plugin install vagrant-vbguest
 ```
 
+A rake task is also provided:
+
+``` shell
+rake vagrant_plugins
+```
+
 ## Downloading modules using r10k
 
 The modules that will be installed to the modules directory are listed
@@ -52,6 +58,12 @@ into the Puppetfile.
 
 ``` shell
 r10k -v INFO puppetfile install
+```
+
+A rake task is also provided:
+
+``` shell
+rake r10k
 ```
 
 ## Bootstraping the puppetmaster
@@ -118,6 +130,7 @@ vagrant reload --provision master
 * [Hiera](http://docs.puppetlabs.com/hiera/1/)
 * [Puppet](http://docs.puppetlabs.com/puppet/latest/reference/)
 * [r10k](https://github.com/adrienthebo/r10k)
+* [rake](http://github.com/jimweirich/rake)
 * [rvm](http://rvm.io/)
 * [Vagrant cachier](https://github.com/fgrehm/vagrant-cachier)
 * [Vagrant hostsupdater](://github.com/cogitatio/vagrant-hostsupdater)
