@@ -15,10 +15,12 @@ Provisionning is done in two steps:
   * Puppet apply will be used to provision the puppetmaster
   * Puppet agent will provision the client, using previously configured master
 
-The puppet modules are installed locally on the host using r10k.
+The local puppet modules are stored into the dist directory.
+The remote puppet modules are installed locally in the modules directory
+on the host using r10k.
 
-The manifests, modules and hieradata repositories are synchronized with
-the puppetmaster in /etc/puppet.
+The manifests, modules, dist and hieradata directories are synchronized
+with the puppetmaster in /etc/puppet.
 
 ## Prerequisities
 
@@ -26,6 +28,8 @@ the puppetmaster in /etc/puppet.
 * bundler
 
 ### Installing required gems
+
+The gems from the Gemfile will be installed.
 
 A rvm profile configuration is provided.
 
@@ -42,6 +46,8 @@ vagrant plugin install vagrant-vbguest
 ```
 
 ## Downloading modules using r10k
+
+The modules that will be installed are listed into the Puppetfile.
 
 ``` shell
 r10k -v INFO puppetfile install
