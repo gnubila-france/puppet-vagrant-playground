@@ -46,6 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     node.vm.synced_folder  "hieradata", "/etc/puppet/hieradata", owner: "puppet", group: "puppet"
     # Share remote modules previously retrieved using r10k
     node.vm.synced_folder  "modules", "/etc/puppet/modules", owner: "puppet", group: "puppet"
+    node.vm.synced_folder  "dist", "/etc/puppet/dist", owner: "puppet", group: "puppet"
 
     # Create a puppetmaster using puppet apply
     node.vm.provision :puppet do |puppet|
@@ -56,7 +57,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # Path on host to puppet modules
       # Be sure to synchronize remote modules to ./modules dir using
       # r10k
-      puppet.module_path = ["modules"]
+      puppet.module_path = ["dist", "modules"]
     end
   end
 
