@@ -78,7 +78,7 @@ sudo puppet cert sign client.local.lan
 ### Manually launching the puppet agent
 
 ``` shell
-puppet agent -vt
+sudo puppet agent -vt
 ```
 
 ## Knwon bugs
