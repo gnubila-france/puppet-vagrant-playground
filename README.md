@@ -5,7 +5,7 @@ Testing puppet stuff using Vagrant VMs.
 
 Two Debian Wheezy VirtualBox VMs can be created: master and client.
 
-* Master is a basic puppetmaster running with webrick..
+* Master is a basic puppetmaster running with webrick.
 * Client is a puppet agent configured using hiera and a default node
 definition (ie. a nodeless setup).
 
@@ -47,7 +47,8 @@ vagrant plugin install vagrant-vbguest
 
 ## Downloading modules using r10k
 
-The modules that will be installed are listed into the Puppetfile.
+The modules that will be installed to the modules directory are listed
+into the Puppetfile.
 
 ``` shell
 r10k -v INFO puppetfile install
@@ -79,7 +80,7 @@ Required at each VM recreation.
 
 * Edit the Vagrantfile to set the owner and group for the synced_folder to
   root. (Only for the master, as folder sync failed, puppet was not
-  installed hence the puppet user does not exist)
+  installed hence the puppet user does not exist yet)
 
 * Fix the VBox additions and reload the VM:
 
@@ -88,8 +89,9 @@ vagrant ssh master -c 'sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGu estA
 vagrant reload master
 ```
 
-On the master puppet apply will fail due to incorrect rights on the
-/etc/puppet/modules directory:
+Once puppet is installed on the master, revert the owner and group of
+the synchronized directories and relaunch a pass to fix possible errors
+due to incorrect rights for the directories.
 
 * Edit the Vagrantfile to set the owner and group for the synced_folder to puppet
 * Reload the VM and force provisionning
