@@ -4,7 +4,12 @@
 packages:
   mysql-server:
     ensure: 'installed'
+  postgresql:
+    ensure: 'installed'
 services:
   mysql:
-    ensure: 'running'
+    ensure: 'stopped'
     require: Package[mysql-server]
+  postgresql:
+    ensure: 'stopped'
+    require: Package[postgresql]
