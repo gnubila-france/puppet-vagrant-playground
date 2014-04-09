@@ -28,7 +28,7 @@ The puppetmaster will autosign the certificate of the client.
 
 * vagrant
 * rake (optional)
-* bundler (optional)
+* bundler (optional if puppet and r10k are alredy installed)
 
 ### Installing required gems
 
