@@ -15,9 +15,8 @@ node 'puppet.local.lan' {
     notify  => Service['puppetmaster'],
   } ->
   file { '/etc/hiera.yaml':
-    ensure  => 'link',
-    target  => '/etc/puppet/hiera.yaml',
-    require => File['/etc/puppet/hiera.yaml'],
+    ensure => 'link',
+    target => '/etc/puppet/hiera.yaml',
   }
 }
 
