@@ -103,26 +103,11 @@ sudo puppet agent -vt
 
 Required at each VM recreation.
 
-* Edit the Vagrantfile to set the owner and group for the synced_folder to
-  root. (Only for the master, as folder sync failed, puppet was not
-  installed hence the puppet user does not exist yet)
-
 * Fix the VBox additions and reload the VM:
 
 ``` shell
 vagrant ssh master -c 'sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions'
 vagrant reload master
-```
-
-Once puppet is installed on the master, revert the owner and group of
-the synchronized directories and relaunch a pass to fix possible errors
-due to incorrect rights for the directories.
-
-* Edit the Vagrantfile to set the owner and group for the synced_folder to puppet
-* Reload the VM and force provisionning
-
-``` shell
-vagrant reload --provision master
 ```
 
 ## Links
