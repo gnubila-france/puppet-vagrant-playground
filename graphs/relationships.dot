@@ -1,0 +1,86 @@
+digraph Relationships {
+    label = "Relationships"
+    "Stage[main]" [
+        fontsize = 8,
+        label = "Stage[main]"
+    ]
+
+    "Class[Settings]" [
+        fontsize = 8,
+        label = "Class[Settings]"
+    ]
+
+    "Class[Main]" [
+        fontsize = 8,
+        label = "Class[Main]"
+    ]
+
+    "Node[default]" [
+        fontsize = 8,
+        label = "Node[default]"
+    ]
+
+    "Package[mysql-server]" [
+        fontsize = 8,
+        label = "Package[mysql-server]"
+    ]
+
+    "Package[postgresql]" [
+        fontsize = 8,
+        label = "Package[postgresql]"
+    ]
+
+    "Service[mysql]" [
+        fontsize = 8,
+        label = "Service[mysql]"
+    ]
+
+    "Service[postgresql]" [
+        fontsize = 8,
+        label = "Service[postgresql]"
+    ]
+
+    "Schedule[puppet]" [
+        fontsize = 8,
+        label = "Schedule[puppet]"
+    ]
+
+    "Schedule[hourly]" [
+        fontsize = 8,
+        label = "Schedule[hourly]"
+    ]
+
+    "Schedule[daily]" [
+        fontsize = 8,
+        label = "Schedule[daily]"
+    ]
+
+    "Schedule[weekly]" [
+        fontsize = 8,
+        label = "Schedule[weekly]"
+    ]
+
+    "Schedule[monthly]" [
+        fontsize = 8,
+        label = "Schedule[monthly]"
+    ]
+
+    "Schedule[never]" [
+        fontsize = 8,
+        label = "Schedule[never]"
+    ]
+
+    "Filebucket[puppet]" [
+        fontsize = 8,
+        label = "Filebucket[puppet]"
+    ]
+
+    "Package[mysql-server]" -> "Service[mysql]" [
+        fontsize = 8
+    ]
+
+    "Package[postgresql]" -> "Service[postgresql]" [
+        fontsize = 8
+    ]
+
+}
