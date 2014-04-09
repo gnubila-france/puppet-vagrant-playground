@@ -42,11 +42,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node.hostsupdater.aliases = ["puppet"]
     end
 
-    node.vm.synced_folder  "manifests", "/etc/puppet/manifests", owner: "puppet", group: "puppet"
-    node.vm.synced_folder  "hieradata", "/etc/puppet/hieradata", owner: "puppet", group: "puppet"
+    node.vm.synced_folder  "manifests", "/etc/puppet/manifests"
+    node.vm.synced_folder  "hieradata", "/etc/puppet/hieradata"
     # Share remote modules previously retrieved using r10k
-    node.vm.synced_folder  "modules", "/etc/puppet/modules", owner: "puppet", group: "puppet"
-    node.vm.synced_folder  "dist", "/etc/puppet/dist", owner: "puppet", group: "puppet"
+    node.vm.synced_folder  "modules", "/etc/puppet/modules"
+    node.vm.synced_folder  "dist", "/etc/puppet/dist"
 
     # Create a puppetmaster using puppet apply
     node.vm.provision :puppet do |puppet|
