@@ -10,12 +10,6 @@ if which puppet > /dev/null 2>&1; then
   exit 0
 fi
 
-if ! grep -q nameserver /etc/resolv.conf; then
-  echo 'No nameserver found...'
-  echo 'Adding 8.8.8.8 as nameserver'
-  echo 'nameserver 8.8.8.8' > /etc/resolv.conf
-fi
-
 # Debian-based systems
 if [ -f '/etc/debian_version' ]; then
 
