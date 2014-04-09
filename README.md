@@ -27,13 +27,17 @@ The puppetmaster will autosign the certificate of the client.
 ## Prerequisities
 
 * vagrant
-* bundler
+* rake (optional)
+* bundler (optional)
 
 ### Installing required gems
 
-The gems from the Gemfile will be installed.
+RVM/rbenv configuration files are present in the repository, you might
+want to edit/suppress them to use your standard/custom ruby installation.
 
-A rvm profile configuration is provided.
+The gems from the Gemfile will be installed using bundler (mainly puppet
+and r10k, if they are alredy installed on the system this step can
+probably be skipped).
 
 ``` shell
 bundle install
