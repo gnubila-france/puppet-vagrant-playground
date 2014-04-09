@@ -93,6 +93,21 @@ sudo puppet cert sign client.local.lan
 sudo puppet agent -vt
 ```
 
+### Creating graphs of the resources and relationships
+
+``` shell
+sudo puppet agent -vt --graph
+cp /var/lib/puppet/state/graphs/* /vagrant/
+```
+
+Creating PNG from the .dot files using graphviz
+
+``` shell
+dot -Tpng resources.dot > resources.png
+dot -Tpng relationships.dot > relationships.png
+dot -Tpng expanded_relationships.dot > expanded_relationships.png
+```
+
 ## Knwon bugs
 
 * VirtualBox 4.3.10 additions are broken with regards to vboxsf:
@@ -112,6 +127,7 @@ vagrant reload master
 
 ## Links
 * [bundler](http://bundler.io/)
+* [graphviz](http://graphviz.org/)
 * [Hiera](http://docs.puppetlabs.com/hiera/1/)
 * [Puppet](http://docs.puppetlabs.com/puppet/latest/reference/)
 * [r10k](https://github.com/adrienthebo/r10k)
