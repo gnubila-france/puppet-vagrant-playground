@@ -18,6 +18,21 @@ node 'puppet.local.lan' {
     ensure => 'link',
     target => '/etc/puppet/hiera.yaml',
   }
+  file { '/etc/puppet/autosign.conf':
+    ensure  => 'present',
+    owner   => 'puppet',
+    group   => 'puppet',
+    mode    => '0640',
+    source  => 'puppet:///modules/site/puppet/autosign.conf',
+    require => Package['puppetmaster'],
+    notify  => Service['puppetmaster'],
+  } ->
+  ini_setting { 'autosign':
+    path    => '/etc/puppet/puppet.conf',
+    section => 'master',
+    setting => 'autosign',
+    value   => '/etc/puppet/autosign.conf',
+  }
 }
 
 node default {
