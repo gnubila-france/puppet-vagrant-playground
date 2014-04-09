@@ -14,7 +14,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # vagrant-cachier - cache at the box level
   if Vagrant.has_plugin?("vagrant-cachier")
-    config.cache.auto_detect = false
     config.cache.scope = :box
   end
 
