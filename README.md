@@ -133,6 +133,6 @@ vagrant reload master
 * [rake](http://github.com/jimweirich/rake)
 * [rvm](http://rvm.io/)
 * [Vagrant cachier](https://github.com/fgrehm/vagrant-cachier)
-* [Vagrant hostsupdater](://github.com/cogitatio/vagrant-hostsupdater)
+* [Vagrant hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater)
 * [Vagrant](http://www.vagrantup.com/)
 * [Vagrant vbguest](https://github.com/dotless-de/vagrant-vbguest)
