@@ -33,6 +33,27 @@ node 'puppet.local.lan' {
     setting => 'autosign',
     value   => '/etc/puppet/autosign.conf',
   }
+
+  package { 'vim-puppet':
+    ensure => 'installed',
+  }
+  exec { 'enable-vim-puppet-addon':
+    command     => 'vim-addon-manager install puppet',
+    unless      => 'vim-addon-manager -q status puppet | grep -q installed',
+    path        => [ '/bin', '/usr/bin' ],
+    environment => 'HOME=/root',
+    require     => Package['vim-puppet'],
+  }
+  file { '/root/.vimrc':
+    ensure  => 'file',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0640',
+    content => "set encoding=utf-8\nfiletype plugin indent on\nsyntax enable",
+  }
+  package { 'tmux':
+    ensure => 'installed',
+  }
 }
 
 node default {
