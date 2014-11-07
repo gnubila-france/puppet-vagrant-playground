@@ -1,13 +1,13 @@
 forge "http://forge.puppetlabs.com"
 
-mod "puppetlabs/stdlib", "4.3.2"
-mod "ploperations/puppet", "0.12.0"
-mod "stahnma/puppetlabs_yum", "0.1.4"
-mod "ploperations/puppetlabs_apt", "0.0.3"
-mod "puppetlabs/apt", "1.6.0"
-mod "ploperations/interval", "1.0.1"
-mod "ploperations/unicorn", "1.0.0"
-mod "ploperations/bundler", "1.0.1"
-mod "puppetlabs/inifile", "1.1.4"
-mod "puppetlabs/apache", "1.1.1"
-mod "puppetlabs/concat", "1.1.0"
+mod "puppetlabs/stdlib", :latest
+mod "ploperations/puppet", :latest
+mod "stahnma/puppetlabs_yum", :latest
+mod "ploperations/puppetlabs_apt", :latest
+mod "puppetlabs/apt", :latest
+mod "ploperations/interval", :latest
+mod "ploperations/unicorn", :latest
+mod "ploperations/bundler", :latest
+mod "puppetlabs/inifile", :latest
+mod "puppetlabs/apache", :latest
+mod "puppetlabs/concat", :latest
