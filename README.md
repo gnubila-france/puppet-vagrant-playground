@@ -1,6 +1,9 @@
 puppet-vagrant-playground
 =========================
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/gnubilafrance/vagrant-playground.svg)](https://forge.puppetlabs.com/gnubilafrance/vagrant-playground)
+[![Build Status](https://travis-ci.org/gnubila-france/puppet-vagrant-playground.png?branch=master)](https://travis-ci.org/gnubila-france/puppet-vagrant-playground)
+
 Testing puppet stuff using Vagrant VMs.
 
 Two Debian Wheezy VirtualBox VMs can be created: master and client.
